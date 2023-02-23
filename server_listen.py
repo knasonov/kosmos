@@ -64,6 +64,12 @@ def send_image():
 @cross_origin()
 def data_csv():
       return render_template("data.csv")
+
+@app.route("/mySite")
+@cross_origin()
+def mySite():
+      return render_template("Site/my1.html")
+	 
 	  
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000, debug=True)
