@@ -57,7 +57,7 @@ def send_js():
 
 @app.route("/image")
 def send_image():
-    filename = 'image.jpg'
+    filename = 'Girl17.jpeg'
     return send_file(filename, mimetype='image/jpg')	  
 
 @app.route("/data.csv")
