@@ -70,6 +70,12 @@ def data_csv():
 def mySite():
       return render_template("Site/my1.html")
 	 
-	  
+@app.route("/game")
+@cross_origin()
+def game():
+      return render_template("game.html")
+
+
+	 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000, debug=True)
