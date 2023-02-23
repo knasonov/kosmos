@@ -55,6 +55,11 @@ def css():
 def send_js():
       return send_from_directory('templates', 'scatter.mjs')
 
+@app.route("/image")
+def send_image():
+    filename = 'image.jpg'
+    return send_file(filename, mimetype='image/jpg')	  
+
 @app.route("/data.csv")
 @cross_origin()
 def data_csv():
