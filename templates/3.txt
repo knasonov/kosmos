@@ -1,0 +1,13 @@
+There are several limits to storing data on the client side, including:
+
+Storage capacity: Browsers typically limit the amount of data that can be stored on the client side. For example, localStorage typically has a limit of 5-10 MB per domain, and IndexedDB may have limits that vary by browser.
+
+Security: Storing sensitive data on the client side can be a security risk, as it can be accessed by other scripts or by malicious actors. If you need to store sensitive data, it is generally better to store it on the server side and use appropriate security measures to protect it.
+
+Performance: Storing large amounts of data on the client side can impact the performance of the web application, especially on mobile devices with limited memory and processing power. It is important to be mindful of the amount of data being stored and to use caching and other performance optimization techniques to minimize the impact on performance.
+
+Persistence: Data stored on the client side is typically persistent, which means that it can remain on the user's device even after the user has closed the browser or shut down the computer. This can be a privacy concern if the data contains sensitive information, and it is important to provide users with a way to clear the stored data if necessary.
+
+Compatibility: Not all browsers support the same client-side storage mechanisms, and the limits and performance characteristics of these mechanisms can vary by browser. This can make it challenging to build web applications that work consistently across all browsers and devices.
+
+It's important to be aware of these limits and to use client-side storage mechanisms judiciously, while also considering server-side storage options and appropriate security measures to protect sensitive data.
