@@ -41,7 +41,7 @@ def data():
         return "This is a test text"
     
     try:
-       s = read_file(f"{param}.txt")
+       s = render_template(f"{param}.txt")
        return s
     except:
        print("Error")	
