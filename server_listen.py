@@ -30,15 +30,13 @@ def another():
 @app.route("/data")
 @cross_origin()
 def data():
-    param = request.args.get('city')
-    print(param)
-    try:
-      print("OK!")
-      return render_template(f'texts/{param}.txt')
-      
-    except:
-      print (f"No city {param}")
-      return "Nothing here"
+    param = request.args.get('param')
+	if (param == "1"):
+        return "This is a first text"
+    if (param == "2"): 
+        return "This is a second text"
+    else:	
+        return "Nothing here"
 
 @app.route("/scatter.html")
 @cross_origin()
