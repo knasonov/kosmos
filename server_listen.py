@@ -41,8 +41,8 @@ def data():
         return "This is a test text"
     
     try:
-	   s = read_file(f"{param}.txt")
-	   return s
+       s = read_file(f"{param}.txt")
+       return s
     except:
        print("Error")	
 	
