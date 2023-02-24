@@ -7,6 +7,12 @@ app = Flask(__name__)
 files1 = os.listdir('.')
 print(files1)
 
+def read_file(filename):
+    with open(filename, 'r') as f:
+        contents = f.read()
+    return contents
+
+
 @app.route('/save', methods=['POST'])
 def save_phrase():
     phrase = request.form['phrase']
@@ -31,13 +37,16 @@ def another():
 @cross_origin()
 def data():
     param = request.args.get('param')
-    if (param == "1"):
-        return "This is a first text"
-    if (param == "2"): 
-        return "This is a second text"
-    else:	
-        return "Nothing here"
-
+    if (param == "Test"):
+        return "This is a test text"
+    
+    try:
+	   s = read_file(f"{param}.txt")
+	   return s
+    except:
+       print("Error")	
+	
+    
 @app.route("/scatter.html")
 @cross_origin()
 def scatter():
