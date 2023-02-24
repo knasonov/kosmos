@@ -31,7 +31,7 @@ def another():
 @cross_origin()
 def data():
     param = request.args.get('param')
-	if (param == "1"):
+    if (param == "1"):
         return "This is a first text"
     if (param == "2"): 
         return "This is a second text"
