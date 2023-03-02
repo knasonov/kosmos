@@ -1,7 +1,9 @@
 import os
 import openai
-openai.api_key = "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"
 import docx
+
+openai.api_key = "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"
+
 
 
 def read_word_doc(file_path):
