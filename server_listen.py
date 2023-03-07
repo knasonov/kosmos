@@ -65,12 +65,12 @@ def send_js():
 @app.route("/image")
 def send_image():
     filename = 'Girl17.jpeg'
-    return send_file(filename, mimetype='video/mp4')	  
+    return send_file(filename, mimetype='image/jpg')	  
 
 @app.route("/video")
 def send_video():
-    filename = 'out1.mp4'
-    return send_file(filename)
+    filename = '/home/konstantin/Videos/out1.mp4'
+    return send_file(filename, mimetype = "video/mp4")
 
 @app.route("/data.csv")
 @cross_origin()
