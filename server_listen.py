@@ -69,7 +69,7 @@ def send_image():
 
 @app.route("/video")
 def send_video():
-    param = request.args.get('name')
+    name = request.args.get('name')
     filename = f'/home/konstantin/Videos/{name}'
     return send_file(filename, mimetype = "video/mp4")
 
