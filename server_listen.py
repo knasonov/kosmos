@@ -88,7 +88,15 @@ def mySite():
 def game():
       return render_template("game.html")
 
+@app.route('/upload', methods=['POST'])
+def upload():
+    file = request.files['file']
+    file.save(file.filename)
+    return 'File uploaded successfully.'
 
-	 
+@app.route('/save')
+def save():
+    return render_template("load_file.html")
+	
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000, debug=True)
