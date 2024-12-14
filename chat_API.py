@@ -2,7 +2,7 @@ import os
 import openai
 import docx
 
-openai.api_key = "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"
+openai.api_key = "CHAT_API_KEY"
 
 
 
